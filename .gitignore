@@ -1,0 +1,9 @@
+# If using a dedicated output directory:
+dist/
+build/
+node_modules/
+
+# If not using a dedicated output directory:
+*.js
+*.js.map
+**/.DS_Store

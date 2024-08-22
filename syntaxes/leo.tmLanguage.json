@@ -1,0 +1,79 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Leo",
+    "patterns": [
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#numbers"
+        },
+        {
+            "include": "#functions"
+        },
+        {
+            "include": "#types"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.leo",
+                    "match": "\\b(if|else|for|return|struct|transition|function|inline|program|import|as|self|assert|assert_eq|assert_neq)\\b"
+                },
+                {
+                    "name": "storage.type.leo",
+                    "match": "\\b(let|const|private|public)\\b"
+                },
+                {
+                    "name": "constant.language.leo",
+                    "match": "\\b(true|false)\\b"
+                }
+            ]
+        },
+        "strings": {
+            "name": "string.quoted.double.leo",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.leo",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.double-slash.leo",
+                    "match": "//.*$"
+                },
+                {
+                    "name": "comment.block.leo",
+                    "begin": "/\\*",
+                    "end": "\\*/"
+                }
+            ]
+        },
+        "numbers": {
+            "name": "constant.numeric.leo",
+            "match": "\\b[0-9]+([uif][8|16|32|64|128])?\\b"
+        },
+        "functions": {
+            "name": "entity.name.function.leo",
+            "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*\\("
+        },
+        "types": {
+            "name": "support.type.leo",
+            "match": "\\b(u8|u16|u32|u64|u128|i8|i16|i32|i64|i128|field|group|scalar|string|bool|address)\\b"
+        }
+    },
+    "scopeName": "source.leo"
+}
