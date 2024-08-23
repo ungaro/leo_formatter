@@ -1,6 +1,7 @@
-# leo-formatter README
+# Unofficial Leo VSCode Extension
 
-This is the README for your extension "leo-formatter". After writing up a brief description, we recommend including the following sections.
+The Leo VSCode extension is an unofficial Leo extension that aims to provide better language support, a working formatter, and more flexibility and speed than the original official extension.
+
 
 ## Features
 
